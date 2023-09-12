@@ -1,3 +1,4 @@
+import Sidebar from "./components/Sidebar";
 import "./globals.scss";
 import type { Metadata } from "next";
 
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="">{children}</body>
+      <body className="dark flex">
+        <Sidebar />
+        {children}
+      </body>
     </html>
   );
 }
