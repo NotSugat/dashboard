@@ -2,20 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineDown, AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
-import { BiPackage } from "react-icons/bi";
-import { GiMoneyStack } from "react-icons/gi";
-import { BiNotepad } from "react-icons/bi";
-import { ImStatsDots } from "react-icons/im";
-import { BsPeople } from "react-icons/bs";
-import { IoExitOutline } from "react-icons/io5";
+import { BiPackage } from "@react-icons/all-files/bi/BiPackage";
+import { GiMoneyStack } from "@react-icons/all-files/gi/GiMoneyStack";
+import { BiNotepad } from "@react-icons/all-files/bi/BiNotepad";
+import { ImStatsDots } from "@react-icons/all-files/im/ImStatsDots";
+import { BsPeople } from "@react-icons/all-files/bs/BsPeople";
+import { IoExitOutline } from "@react-icons/all-files/io5/IoExitOutline";
 
-import { Button } from "@/components/ui/button";
-
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import React, { useState } from "react";
 
 const Sidebar = () => {
