@@ -1,23 +1,23 @@
 import Navbar from "../components/Navbar";
 import StatsCard from "../components/StatsCard";
 import { BsFillBasket2Fill } from "react-icons/bs";
-import { GrCurrency } from "@react-icons/all-files/gr/GrCurrency";
 import { BiPackage } from "@react-icons/all-files/bi/BiPackage";
 import { BsPeople } from "@react-icons/all-files/bs/BsPeople";
-import { GiMoneyStack } from "react-icons/gi";
 import { LuWallet } from "react-icons/lu";
 import LineChart from "../components/LineChart";
+import { ComboBox } from "../components/ComboBox";
+import { Button } from "@/components/ui/button";
 
 const HomePage = () => {
   return (
     <main className="h-[100dvh] w-full bg-secondary">
       <Navbar />
 
-      <section className="mx-auto my-2 grid grid-cols-2 justify-center gap-4 bg-red-500 ">
+      <section className=" my-2 grid grid-cols-2 justify-center gap-4   px-4 ">
         <div className="bg-card p-4">
           <LineChart />
         </div>
-        <div className="grid w-[calc(2*var(--card-width)_+_0.5rem)] grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-4">
           <StatsCard
             title="Sales Today"
             earning={12000}
@@ -50,6 +50,22 @@ const HomePage = () => {
             isCurrency={false}
             icon={<BsPeople className="icon text-orange-400" />}
           />
+        </div>
+      </section>
+
+      {/* Products section */}
+
+      <section className="px-4">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">Product</h2>
+
+          <div className="space-x-4">
+            <ComboBox />
+
+            <Button className="bg-background text-primary transition-all ease-in-out hover:bg-slate-950 hover:bg-opacity-80">
+              + Add Product
+            </Button>
+          </div>
         </div>
       </section>
     </main>

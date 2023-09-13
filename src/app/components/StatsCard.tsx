@@ -14,7 +14,7 @@ const StatsCard = ({
   icon: any;
 }) => {
   return (
-    <div className="w-[var(--card-width)] rounded-sm bg-card p-6">
+    <div className=" rounded-sm bg-card p-6">
       <div className="flex  justify-between">
         <p className="text-md font-medium">{title}</p>
         {icon}
