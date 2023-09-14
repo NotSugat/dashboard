@@ -4,6 +4,10 @@ const nextConfig = {
     remotepatterns: [
       {
         protocol: "https",
+        hostname: "phoneaqua.com",
+      },
+      {
+        protocol: "https",
         hostname: "*",
       },
     ],
