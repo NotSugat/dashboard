@@ -19,7 +19,7 @@ async function getData(): Promise<Product[]> {
     name: "Iphone 12 pro max 6 gb ram 128 gb rom",
     price: "1200",
     availability: "In Stock",
-    sell: 120,
+    sell: (Math.random() * 100).toFixed(2),
     earning: 12000,
   }));
 }

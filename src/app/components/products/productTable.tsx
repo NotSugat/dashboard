@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -15,7 +16,6 @@ import {
   getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { Button } from "react-day-picker";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -87,9 +87,26 @@ const ProductTable = <TData, TValue>({
               </TableRow>
             )}
           </TableBody>
-
-          <TableFooter></TableFooter>
         </Table>
+        <div className="flex items-center justify-between gap-1">
+          <p className="text-muted-foreground">100 total items</p>
+          <div>
+            <Button
+              disabled={!table.getCanPreviousPage()}
+              onClick={() => table.previousPage()}
+              className="bg-background px-8 text-primary transition-all ease-in-out hover:bg-slate-950 hover:bg-opacity-80  "
+            >
+              Prev
+            </Button>
+            <Button
+              disabled={!table.getCanNextPage()}
+              onClick={() => table.nextPage()}
+              className="bg-background px-8 text-primary transition-all ease-in-out hover:bg-slate-950 hover:bg-opacity-80"
+            >
+              Next
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
