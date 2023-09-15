@@ -9,8 +9,23 @@ import { ComboBox } from "../components/ComboBox";
 import { Button } from "@/components/ui/button";
 import DataTable from "../components/DataTable";
 import { TableData } from "../components/TableData";
+import ProductTable from "../components/products/productTable";
+import { Product, colums } from "../components/products/columns";
 
-const HomePage = () => {
+async function getData(): Promise<Product[]> {
+  return new Array(50).fill(null).map(() => ({
+    id: 1,
+    image: "/assets/logo.png",
+    name: "Iphone 12 pro max 6 gb ram 128 gb rom",
+    price: "1200",
+    availability: "In Stock",
+    sell: 120,
+    earning: 12000,
+  }));
+}
+
+const HomePage = async () => {
+  const data = await getData();
   return (
     <main className="h-[100dvh] w-full bg-secondary">
       <Navbar />
@@ -70,7 +85,9 @@ const HomePage = () => {
           </div>
         </div>
 
-        <TableData />
+        {/* <TableData /> */}
+        {/* <TableData /> */}
+        <ProductTable data={data} columns={colums} />
       </section>
     </main>
   );
