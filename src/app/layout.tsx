@@ -1,6 +1,7 @@
 import Sidebar from "./components/Sidebar";
 import "./globals.scss";
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "LogiSync",
@@ -13,11 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="dark flex">
-        <Sidebar />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className="dark flex">
+          <Sidebar />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

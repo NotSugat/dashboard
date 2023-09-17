@@ -3,6 +3,7 @@ import { DatePicker } from "./DatePicker";
 import SearchBar from "./SearchBar";
 import { BiMessageAlt } from "@react-icons/all-files/bi/BiMessageAlt";
 import { IoIosNotificationsOutline } from "@react-icons/all-files/io/IoIosNotificationsOutline";
+import { UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -16,12 +17,13 @@ const Navbar = () => {
         <BiMessageAlt className="rounded-icon h-10 w-10 " />
         <IoIosNotificationsOutline className="rounded-icon h-10 w-10" />
 
-        <Image
-          alt="Store Logo"
-          src="/assets/store-logo.png"
-          height={1000}
-          width={1000}
-          className="h-12 w-12 rounded-full bg-[#E6E9E3] p-1"
+        <UserButton
+          afterSignOutUrl="/sign-in"
+          appearance={{
+            elements: {
+              avatarBox: "h-12 w-12",
+            },
+          }}
         />
         <p className="text-xl">Super Store</p>
       </div>
