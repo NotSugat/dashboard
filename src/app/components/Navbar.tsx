@@ -21,7 +21,7 @@ const Navbar = () => {
           afterSignOutUrl="/sign-in"
           appearance={{
             elements: {
-              avatarBox: "h-12 w-12",
+              avatarBox: "h-10 w-10",
             },
           }}
         />
