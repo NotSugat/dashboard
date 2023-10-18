@@ -15,7 +15,7 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <aside className="relative h-[100dvh] w-[var(--sidebar-width)]  px-6">
+    <aside className="sticky top-0 h-[100dvh] w-[var(--sidebar-width)]  px-6 ">
       <div className="flex items-center gap-4 pt-4">
         <Image
           alt="LogiSync Logo"

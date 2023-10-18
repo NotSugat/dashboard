@@ -7,7 +7,7 @@ import { UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
-    <div className="flex h-14 items-center justify-between bg-background px-2">
+    <div className="sticky top-0 flex h-14 items-center justify-between bg-background px-2">
       <div className="flex items-center gap-4">
         <SearchBar />
         <DatePicker />

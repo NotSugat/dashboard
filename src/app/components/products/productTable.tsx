@@ -33,7 +33,7 @@ const ProductTable = <TData, TValue>({
     getPaginationRowModel: getPaginationRowModel(),
     initialState: {
       pagination: {
-        pageSize: 5,
+        pageSize: 4,
       },
     },
   });

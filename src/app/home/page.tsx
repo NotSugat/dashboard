@@ -27,7 +27,7 @@ async function getData(): Promise<Product[]> {
 const HomePage = async () => {
   const data = await getData();
   return (
-    <main className="h-[100dvh] w-full bg-secondary">
+    <main className=" w-full bg-secondary">
       <Navbar />
 
       <section className=" grid grid-cols-2 justify-center gap-4 p-4 ">

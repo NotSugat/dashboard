@@ -2,6 +2,7 @@ import Sidebar from "./components/Sidebar";
 import "./globals.scss";
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
+import AuthProvider from "./providers";
 
 export const metadata: Metadata = {
   title: "LogiSync",
@@ -16,9 +17,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="dark flex">
-          <Sidebar />
-          {children}
+        <body className="dark">
+          <AuthProvider>
+            {children}
+          </AuthProvider>
         </body>
       </html>
     </ClerkProvider>
