@@ -1,16 +1,15 @@
-import Navbar from "../components/Navbar";
-import StatsCard from "../components/StatsCard";
+import StatsCard from "@/app/components/StatsCard";
 import { BsFillBasket2Fill } from "react-icons/bs";
 import { BiPackage } from "@react-icons/all-files/bi/BiPackage";
 import { BsPeople } from "@react-icons/all-files/bs/BsPeople";
 import { LuWallet } from "react-icons/lu";
-import LineChart from "../components/LineChart";
-import { ComboBox } from "../components/ComboBox";
+import { TableData } from "@/app/components/TableData";
+import { Product, colums } from "@/app/components/products/columns";
+import Navbar from "@/app/components/Navbar";
+import LineChart from "@/app/components/LineChart";
+import { ComboBox } from "@/app/components/ComboBox";
 import { Button } from "@/components/ui/button";
-import DataTable from "../components/DataTable";
-import { TableData } from "../components/TableData";
-import ProductTable from "../components/products/productTable";
-import { Product, colums } from "../components/products/columns";
+import ProductTable from "@/app/components/products/productTable";
 
 async function getData(): Promise<Product[]> {
   return new Array(50).fill(null).map(() => ({
@@ -85,7 +84,6 @@ const HomePage = async () => {
           </div>
         </div>
 
-        {/* <TableData /> */}
         {/* <TableData /> */}
         <ProductTable data={data} columns={colums} />
       </section>

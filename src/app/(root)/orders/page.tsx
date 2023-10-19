@@ -1,5 +1,5 @@
-import { Product, colums } from "../components/products/columns";
-import ProductTable from "../components/products/productTable";
+import { Product, colums } from "@/app/components/products/columns";
+import ProductTable from "@/app/components/products/productTable";
 
 async function getData(): Promise<Product[]> {
   return new Array(50).fill(null).map(() => ({
