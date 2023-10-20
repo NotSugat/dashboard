@@ -44,7 +44,7 @@
     "lucide-react": "^0.272.0",
     "mongodb": "^6.0.0",
     "mongoose": "^7.5.1",
-    "next": "latest",
+    "next": "13.4.7",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",

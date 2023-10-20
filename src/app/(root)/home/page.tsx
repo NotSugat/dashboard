@@ -85,7 +85,7 @@ const HomePage = async () => {
         </div>
 
         {/* <TableData /> */}
-        <ProductTable data={data} columns={colums} />
+        <ProductTable data={data} columns={colums} itemNumber={4} />
       </section>
     </main>
   );

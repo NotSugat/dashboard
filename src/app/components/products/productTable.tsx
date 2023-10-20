@@ -20,11 +20,13 @@ import {
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  itemNumber: number;
 }
 
 const ProductTable = <TData, TValue>({
   columns,
   data,
+  itemNumber,
 }: DataTableProps<TData, TValue>) => {
   const table = useReactTable({
     data,
@@ -33,7 +35,7 @@ const ProductTable = <TData, TValue>({
     getPaginationRowModel: getPaginationRowModel(),
     initialState: {
       pagination: {
-        pageSize: 4,
+        pageSize: itemNumber,
       },
     },
   });

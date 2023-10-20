@@ -1,5 +1,6 @@
 import { Product, colums } from "@/app/components/products/columns";
 import ProductTable from "@/app/components/products/productTable";
+import { Button } from "@/components/ui/button";
 
 async function getData(): Promise<Product[]> {
   return new Array(50).fill(null).map(() => ({
@@ -16,10 +17,14 @@ async function getData(): Promise<Product[]> {
 const Orders = async () => {
   const data = await getData();
   return (
-    <div>
-      Order list
-      <ProductTable data={data} columns={colums} />
-    </div>
+    <main className="w-full p-2">
+      <div className="flex items-center justify-between">
+        <h1 className="py-2 text-2xl">Order Items</h1>
+        <Button>Add +</Button>
+      </div>
+
+      <ProductTable data={data} columns={colums} itemNumber={10} />
+    </main>
   );
 };
 
